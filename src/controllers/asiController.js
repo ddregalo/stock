@@ -13,4 +13,24 @@ const addNewArtwork = function(req, res) {
   });
 };
 
-module.exports = addNewArtwork;
+const allArtworks = function(req, res) {
+  Artwork.find({}, function(err, artwork) {
+    if(err) {
+      res.send(err);
+    }
+    res.json(artwork);
+  });
+};
+
+const artworkByTitle = function(req, res) {
+  Artwork.findOne({'artworkTitle': req.params.asiTitle}, function(err, artwork) {
+    if(err) {
+      res.send(err);
+    }
+    res.json(artwork);
+  });
+};
+
+module.exports.add = addNewArtwork;
+module.exports.all = allArtworks;
+module.exports.byTitle = artworkByTitle;
