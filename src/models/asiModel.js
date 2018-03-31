@@ -7,8 +7,7 @@ const ArtworkSchema = new Schema({
     required: 'Enter artist name.'
   },
   artworkImage: {
-    data: Buffer,
-    contentType: String
+    type: Array
   },
   artworkTitle: {
     type: String,

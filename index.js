@@ -13,6 +13,7 @@ mongoose.connect('mongodb://localhost/ASIdb');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+// connect app with router
 router(app);
 
 app.get('/', function(req, res) {

@@ -1,3 +1,5 @@
+const addNewArtwork = require('../controllers/asiController');
+
 const router = function(app) {
   app.route('/home')
   .get(function(req, res){
@@ -5,9 +7,9 @@ const router = function(app) {
     console.log(`Request type: ${req.method}`)
     res.send('GET request successful')
   })
-  .post(function(req, res) {
-    res.send('POST request sucessful')
-  });
+  
+  // post newArtwork endpoint
+  .post(addNewArtwork);
 
   app.route('/home/:asiId')
   .put(function(req, res){
