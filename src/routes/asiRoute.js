@@ -1,6 +1,8 @@
 const router = function(app) {
   app.route('/home')
   .get(function(req, res){
+    console.log(`Request from: ${req.originalUrl}`)
+    console.log(`Request type: ${req.method}`)
     res.send('GET request successful')
   })
   .post(function(req, res) {
@@ -12,7 +14,7 @@ const router = function(app) {
     res.send('PUT request successful')
   })
   .delete(function(req, res) {
-    res.send('DELETErequest sucessful')
+    res.send('DELETE request sucessful')
   });
 };
 module.exports = router;
