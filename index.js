@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 // connect app with router
 router(app);
 
+app.use(express.static('public/images'));
+
 app.get('/', function(req, res) {
   res.send(`Node and express running on port ${PORT}`)
 });
