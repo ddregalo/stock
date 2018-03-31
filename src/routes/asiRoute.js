@@ -2,6 +2,8 @@ const Artworks = require('../controllers/asiController');
 const addNewArtwork = Artworks.add;
 const allArtworks = Artworks.all;
 const artworkByTitle = Artworks.byTitle;
+const artworkUpdateByTitle = Artworks.update;
+const artworkDeleteByTitle = Artworks.delete;
 
 const router = function(app) {
   app.route('/home')
@@ -14,12 +16,8 @@ const router = function(app) {
   // get specific artwork by title
   .get(artworkByTitle)
   // put request to update artwork data
-  .put(function(req, res){
-    res.send('PUT request successful')
-  })
+  .put(artworkUpdateByTitle)
   // delete request to delete artwork data
-  .delete(function(req, res) {
-    res.send('DELETE request sucessful')
-  });
+  .delete(artworkDeleteByTitle);
 };
 module.exports = router;

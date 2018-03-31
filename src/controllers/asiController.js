@@ -31,6 +31,26 @@ const artworkByTitle = function(req, res) {
   });
 };
 
+const artworkUpdateByTitle = function(req, res) {
+  Artwork.findOneAndUpdate({'artworkTitle': req.params.asiTitle}, req.body, {new: true}, function(err, artwork) {
+    if(err) {
+      res.send(err);
+    }
+    res.json(artwork);
+  });
+};
+
+const artworkDeleteByTitle = function(req, res) {
+  Artwork.remove({'artworkTitle': req.params.asiTitle}, function(err, artwork) {
+    if(err) {
+      res.send(err);
+    }
+    res.json({ message: 'Successfully deleted contact'});
+  });
+};
+
 module.exports.add = addNewArtwork;
 module.exports.all = allArtworks;
 module.exports.byTitle = artworkByTitle;
+module.exports.update = artworkUpdateByTitle;
+module.exports.delete = artworkDeleteByTitle;
