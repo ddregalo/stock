@@ -36,6 +36,10 @@ const ArtworkSchema = new Schema({
     type: Number,
     required: 'Enter artwork price or 0 for not for sale.'
   },
+  artworkDimensions: {
+    type: String,
+    required: 'Enter artwork dimensions (h x w cm).'
+  },
   create_date: {
     type: Date,
     default: Date.now

@@ -15,8 +15,13 @@ app.use(bodyParser.json());
 
 // connect app with router
 router(app);
+app.set('views','./views');
+app.set('view engine', 'ejs');
 
+// express static setups
 app.use(express.static('public/images'));
+app.use(express.static('public/styles'));
+app.use(express.static('public/scripts'));
 
 app.get('/', function(req, res) {
   res.send(`Node and express running on port ${PORT}`)

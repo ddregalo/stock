@@ -13,13 +13,9 @@ const addNewArtwork = function(req, res) {
   });
 };
 
-const allArtworks = function(req, res) {
-  Artwork.find({}, function(err, artwork) {
-    if(err) {
-      res.send(err);
-    }
-    res.json(artwork);
-  });
+const getAllArtworks = function(req, res) {
+
+
 };
 
 const artworkByTitle = function(req, res) {
@@ -50,7 +46,7 @@ const artworkDeleteByTitle = function(req, res) {
 };
 
 module.exports.add = addNewArtwork;
-module.exports.all = allArtworks;
+module.exports.all = getAllArtworks;
 module.exports.byTitle = artworkByTitle;
 module.exports.update = artworkUpdateByTitle;
 module.exports.delete = artworkDeleteByTitle;

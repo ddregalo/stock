@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>STOCK</title>
+    <link rel="stylesheet" type="text/css" href="./menu_main.css">
+    <!-- <style>
+      body {
+        background-color: #ffffff;
+      }
+
+      #menu_main {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width:100%;
+      }
+
+      #menu_main > div {
+        border-style:solid;
+        border-width:thin;
+        border-color:#382e2c;
+        text-align:center;
+        padding-top:20px;
+        height:40px;
+      }
+
+      #menu_main > div:hover {
+        cursor:pointer;
+        opacity:0.2;
+      }
+    </style> -->
+    <script src="./home.js" defer></script>
+  </head>
+  <body>
+
+    <h1>STOCK</h1>
+    <div id="menu_main">
+      <div onclick="goTo('search')" style="background:#c6b4a9">SEARCH</div>
+      <div onclick="goTo('')" style="background:#d1ac9e">HOME</div>
+      <div onclick="goTo('add')" style="background:#c6b4a9">ADD ARTWORK</div>
+    </div>
+    <div id="collection"></div>
+  </body>
+</html>
