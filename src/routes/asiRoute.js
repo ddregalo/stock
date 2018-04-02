@@ -15,7 +15,7 @@ const router = function(app) {
   app.get('/home', function(req, res) {
     res.render('index');
   });
-  // get request to send all artworks on the database
+  // get request to send all artworks on the database - not redered
   app.get('/artworks/all', function(req, res) {
     Artwork.find({}, function(err, artwork) {
       if(err) {
@@ -26,12 +26,28 @@ const router = function(app) {
     });
   })
 
+  app.get('/new_artwork', function(req, res) {
+    res.render('new_artwork');
+  });
 
+  app.post('/artworks/add', function(req, res) {
+    let artworkData = {
+      artist: req.body.artist,
+      artworkImage: req.body.image,
+      artworkTitle: req.body.title,
+      artworkYear: req.body.year,
+      artworkCollection: req.body.collection,
+      artworkMedium: req.body.medium,
+      artworkEdition: req.body.edition,
+      artworkSigned: req.body.signed,
+      artworkDimensions: req.body.dimensions,
+    };
+    console.log(artworkData);
+    let newArtwork = Artwork(artworkData);
+    newArtwork.save();
+    res.redirect('/home');
+  });
 
-
-  // route for all artworks - not rendered
-  // app.route('/home').get(getAllArtworks);
-  //
   // app.route('/home/:asiTitle')
   // get specific artwork by title
   // .get(artworkByTitle)

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>STOCK</title>
+    <link rel="stylesheet" type="text/css" href="./new_artwork.css">
+    <link rel="stylesheet" type="text/css" href="./menu_main.css">
+    <script src="./menu_main.js"></script>
+  </head>
+  <body>
+    </br>
+    <h1>STOCK</h1>
+    </br>
+    <div id="menu_main">
+      <div onclick="goTo('home')" style="background:#dddddd;font-family:Avenir;font-weight:200">HOME</div>
+      <div onclick="goTo('search')" style="background:#dddddd;font-family:Avenir;font-weight:200">SEARCH</div>
+      <div onclick="goTo('new_artwork')" style="background:#dddddd;font-family:Avenir;font-weight:200">ADD ARTWORK</div>
+      <div onclick="goTo('update')" style="background:#dddddd;font-family:Avenir;font-weight:200">UPDATE ARTWORK</div>
+      <div onclick="goTo('delete')" style="background:#dddddd;font-family:Avenir;font-weight:200">DELETE ARTWORK</div>
+    </div>
+    <div id="new_artwork_form">
+      <form action="/artworks/add" method="post">
+        <p>ARTIST</p>
+        <input type="text" placeholder="ARTIST NAME" name="artist">
+        </br>
+        <p>IMAGE URL</p>
+        <input type="text" placeholder="IMAGE URL" name="image">
+        </br>
+        <p>TITLE</p>
+        <input type="text" placeholder="TITLE" name="title">
+        </br>
+        <p>YEAR</p>
+        <input type="text" placeholder="YEAR" name="year">
+        </br>
+        <p>COLLECTION</p>
+        <input type="text" placeholder="COLLECTION" name="collection">
+        </br>
+        <p>MEDIUM</p>
+        <input type="text" placeholder="MEDIUM" name="medium">
+        </br>
+        <p>EDITION</p>
+        <input type="text" placeholder="EDITION NUMBER/SIZE or UNIQUE" name="edition">
+        </br>
+        <p>SIGNED</p>
+        <input type="text" placeholder="SIGNED OR UNSIGNED" name="signed">
+        </br>
+        <p>DIMENSIONS</p>
+        <input type="text" placeholder="H x W cm" name="dimensions">
+        </br>
+        <button id="add_button" type="submit">ADD ARTWORK</button>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+      </form>
+    </div>
+  </body>
+</html>

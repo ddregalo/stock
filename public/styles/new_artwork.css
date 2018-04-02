@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+}
+
+p {
+  font-family: Didot;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 2px;
+}
+
+h1 {
+  font-family: Didot;
+  font-size: 50px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  margin: 2px;
+  text-align: center;
+}
+
+h3 {
+  font-family: Didot;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  margin: 2px;
+  text-align: left;
+}
+
+input {
+  margin-bottom: 20px;
+  outline: none;
+}
+
+input[type=submit]:focus {
+    background-color: #fc7b7b;
+}
+
+#new_artwork_form {
+  font-size:15px;
+  position:relative;
+  bottom: -60px;
+  left:45%;
+  width:100%;
+  top: 12%;
+  height:80%;
+  overflow-y:auto;
+}
+
+#add_button {
+  background-color: #322e33;
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 15px;
+  color: white;
+  width: 140px;
+  height: 45px;
+}

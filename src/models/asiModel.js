@@ -32,12 +32,12 @@ const ArtworkSchema = new Schema({
     type: String,
     required: 'Enter yes or no if the artwork is signed.'
   },
-  artworkPrice: {
+  artworkDimensions: {
     type: Number,
     required: 'Enter artwork price or 0 for not for sale.'
   },
-  artworkDimensions: {
-    type: String,
+  artworkPrice: {
+    type: Number,
     required: 'Enter artwork dimensions (h x w cm).'
   },
   create_date: {
